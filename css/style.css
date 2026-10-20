@@ -80,6 +80,8 @@ section { padding: var(--space-xl) 0; }
 }
 .btn-primary { background: var(--color-gold); color: var(--color-charcoal); }
 .btn-primary:hover { background: var(--color-gold-bright); transform: translateY(-2px); }
+.btn-reserve { background: #FF6B00; color: #ffffff; }
+.btn-reserve:hover { background: #ff8426; transform: translateY(-2px); }
 .btn-outline { background: transparent; color: var(--color-cream); border-color: rgba(246, 239, 228, 0.6); }
 .btn-outline:hover { background: rgba(246, 239, 228, 0.12); border-color: var(--color-cream); }
 .btn-dark { background: var(--color-charcoal); color: var(--color-cream); }
