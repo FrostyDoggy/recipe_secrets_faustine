@@ -64,28 +64,34 @@ section { padding: var(--space-xl) 0; }
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
 }
 
-/* ===== Buttons ===== */
+/* ===== Buttons (8-bit retro) ===== */
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.95rem 2.1rem;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.03em;
-  border: 1px solid transparent;
+  padding: 1rem 1.8rem;
+  border-radius: 0;
+  font-family: "Press Start 2P", var(--font-body);
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: 3px solid var(--color-charcoal);
+  box-shadow: 4px 4px 0 var(--color-charcoal);
   cursor: pointer;
-  transition: background var(--transition), color var(--transition), border-color var(--transition), transform var(--transition);
+  image-rendering: pixelated;
+  transition: transform 0.1s steps(1), box-shadow 0.1s steps(1);
 }
+.btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--color-charcoal); }
+.btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--color-charcoal); }
 .btn-primary { background: var(--color-gold); color: var(--color-charcoal); }
-.btn-primary:hover { background: var(--color-gold-bright); transform: translateY(-2px); }
-.btn-reserve { background: #FF6B00; color: #ffffff; }
-.btn-reserve:hover { background: #ff8426; transform: translateY(-2px); }
-.btn-outline { background: transparent; color: var(--color-cream); border-color: rgba(246, 239, 228, 0.6); }
-.btn-outline:hover { background: rgba(246, 239, 228, 0.12); border-color: var(--color-cream); }
+.btn-primary:hover { background: var(--color-gold-bright); }
+.btn-reserve { background: #FF6B00; color: #ffffff; border-color: var(--color-charcoal); }
+.btn-reserve:hover { background: #ff8426; }
+.btn-outline { background: var(--color-charcoal); color: var(--color-cream); border-color: var(--color-cream); box-shadow: 4px 4px 0 rgba(246, 239, 228, 0.6); }
+.btn-outline:hover { background: var(--color-charcoal-soft); box-shadow: 6px 6px 0 rgba(246, 239, 228, 0.6); }
 .btn-dark { background: var(--color-charcoal); color: var(--color-cream); }
-.btn-dark:hover { background: var(--color-charcoal-soft); transform: translateY(-2px); }
+.btn-dark:hover { background: var(--color-charcoal-soft); }
 
 /* ===== Header ===== */
 .site-header {
